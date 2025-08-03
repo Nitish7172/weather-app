@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherWise App</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Link to your custom CSS file -->
+    <link rel="stylesheet" href="wheather.css">
+</head>
+<body>
+    <div class="card">
+        <h1 class="text-3xl font-bold text-gray-800 mb-6">WeatherWise</h1>
+
+        <div class="flex flex-col sm:flex-row gap-4 mb-6">
+            <input type="text" id="cityInput" placeholder="Enter city name" class="input-field flex-grow">
+            <button id="searchBtn" class="btn">Get Weather</button>
+        </div>
+
+        <div id="loadingSpinner" class="loading-spinner"></div>
+        <div id="errorMessage" class="error-message"></div>
+
+        <div id="weatherInfo" class="weather-info hidden">
+            <h2 id="cityName"></h2>
+            <p id="temperature"></p>
+            <p id="weatherDescription" class="capitalize"></p>
+
+            <div class="weather-details">
+                <div class="detail-item">
+                    <span id="humidity"></span>
+                    <p>Humidity</p>
+                </div>
+                <div class="detail-item">
+                    <span id="windSpeed"></span>
+                    <p>Wind Speed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to your JavaScript file -->
+    <script src="wheather.js"></script>
+</body>
+</html>
